@@ -1,0 +1,239 @@
+.room-availability {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.section-header h2 {
+  margin: 0;
+  color: #333;
+  font-size: 1.8em;
+}
+
+.date-selector {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.date-selector label {
+  font-weight: 600;
+  color: #333;
+}
+
+.date-selector input {
+  padding: 10px 15px;
+  border: 2px solid #667eea;
+  border-radius: 6px;
+  font-size: 1em;
+}
+
+.stats-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.stat-item {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-left: 4px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-item.occupied {
+  border-left-color: #ff9800;
+}
+
+.stat-item.available {
+  border-left-color: #4caf50;
+}
+
+.stat-item.cleaning {
+  border-left-color: #2196f3;
+}
+
+.stat-item.maintenance {
+  border-left-color: #f44336;
+}
+
+.stat-item.occupancy {
+  border-left-color: #667eea;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.stat-value {
+  color: #333;
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+.rooms-management {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  overflow-x: auto;
+}
+
+.rooms-management h3 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+
+.rooms-table {
+  background: white;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 80px 150px 120px 150px 120px 120px;
+  gap: 15px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 80px 150px 120px 150px 120px 120px;
+  gap: 15px;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.table-row:hover {
+  background: #f9f9f9;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85em;
+  font-weight: 600;
+  color: white;
+}
+
+.status-badge.available {
+  background: #4caf50;
+}
+
+.status-badge.occupied {
+  background: #ff9800;
+}
+
+.status-badge.cleaning {
+  background: #2196f3;
+}
+
+.status-badge.maintenance {
+  background: #f44336;
+}
+
+.status-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9em;
+  cursor: pointer;
+  background: white;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.legend {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.legend h3 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.legend-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.legend-item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+
+.legend-color.available {
+  background: #4caf50;
+}
+
+.legend-color.occupied {
+  background: #ff9800;
+}
+
+.legend-color.cleaning {
+  background: #2196f3;
+}
+
+.legend-color.maintenance {
+  background: #f44336;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: auto;
+  }
+
+  .col-room-id::before { content: "Room: "; font-weight: 600; }
+  .col-type::before { content: "Type: "; font-weight: 600; }
+  .col-status::before { content: "Status: "; font-weight: 600; }
+  .col-guest::before { content: "Guest: "; font-weight: 600; }
+  .col-checkout::before { content: "Check-Out: "; font-weight: 600; }
+}

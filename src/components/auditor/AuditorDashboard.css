@@ -1,0 +1,127 @@
+.auditor-dashboard {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auditor-header {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auditor-info h1 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 2em;
+}
+
+.auditor-details {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.auditor-name,
+.auditor-date {
+  font-size: 1.1em;
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hotel-selection-container {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-selection-container h2 {
+  color: #667eea;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 1.5em;
+}
+
+.hotels-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.hotel-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #f8f9fa;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.05em;
+}
+
+.hotel-card:hover {
+  background: #f0f0f0;
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+  transform: translateX(5px);
+}
+
+.hotel-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.hotel-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.hotel-rooms {
+  font-size: 0.9em;
+  color: #999;
+}
+
+.hotel-arrow {
+  color: #667eea;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .auditor-header {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .auditor-info h1 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+
+  .auditor-details {
+    gap: 15px;
+  }
+
+  .hotel-selection-container {
+    padding: 20px;
+  }
+
+  .hotel-card {
+    padding: 15px;
+  }
+}

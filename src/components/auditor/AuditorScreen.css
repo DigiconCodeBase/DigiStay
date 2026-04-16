@@ -1,0 +1,92 @@
+.auditor-screen {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.complete-audit-floating {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+}
+
+.complete-audit-btn {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05em;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
+  transition: all 0.3s ease;
+}
+
+.complete-audit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+}
+
+.auditor-footer {
+  margin-top: auto;
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+  justify-content: flex-end;
+}
+
+.footer-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.footer-btn.secondary {
+  background: #667eea;
+  color: white;
+}
+
+.footer-btn.secondary:hover {
+  background: #764ba2;
+  transform: scale(1.05);
+}
+
+.footer-btn.danger {
+  background: #ef4444;
+  color: white;
+}
+
+.footer-btn.danger:hover {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .complete-audit-floating {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .complete-audit-btn {
+    padding: 12px 24px;
+    font-size: 0.95em;
+  }
+
+  .auditor-footer {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .footer-btn {
+    width: 100%;
+  }
+}
