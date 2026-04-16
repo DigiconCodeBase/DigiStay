@@ -113,7 +113,7 @@ export default function LoginScreen() {
             <input
               id="username"
               type="text"
-              value={username}
+              value="admin"
               onChange={(e) => {
                 setUsername(e.target.value);
                 if (errors.username) setErrors({ ...errors, username: '' });
@@ -130,7 +130,7 @@ export default function LoginScreen() {
             <input
               id="password"
               type="password"
-              value="{password}"
+              value="password123"
               onChange={(e) => {
                 setPassword(e.target.value);
                 if (errors.password) setErrors({ ...errors, password: '' });

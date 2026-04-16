@@ -5,6 +5,7 @@
  */
 
 import { formatDateBooking, addDays, deepCopy } from '../utils/utility';
+import { PaymentType, PaymentStatus } from '../components/common/enums';
 
 // ============================================
 // CURRENT DATE - Update this to change all reference dates
@@ -460,6 +461,162 @@ export const AUDIT_REPORTS_DATA = {
       rooms: 20,
       issues: 3,
       notes: 'Issues in Rooms 302, 305, and 310. Maintenance team notified.'
+    }
+  ]
+};
+
+// ============================================
+// PAYMENT REPORTS DATA - Payment transactions by hotel
+// ============================================
+export const PAYMENT_REPORTS_DATA = {
+  1: [ // Hotel ID 1 - DigiStay Mumbai
+    {
+      id: 1001,
+      guestName: 'Arjun Singh',
+      bookingId: 'BK001',
+      amount: 15800,
+      date: '2026-04-15',
+      time: '14:30',
+      method: PaymentType.CREDIT_CARD,
+      status: PaymentStatus.COMPLETED,
+      referenceNo: 'REF-CC-001',
+      notes: 'Payment successful via online portal'
+    },
+    {
+      id: 1002,
+      guestName: 'Priya Sharma',
+      bookingId: 'BK002',
+      amount: 23700,
+      date: '2026-04-14',
+      time: '10:15',
+      method: PaymentType.BANK_TRANSFER,
+      status: PaymentStatus.COMPLETED,
+      referenceNo: 'REF-BT-002',
+      notes: 'Direct bank transfer completed'
+    },
+    {
+      id: 1003,
+      guestName: 'Amit Patel',
+      bookingId: 'BK003',
+      amount: 13090,
+      date: '2026-04-13',
+      time: '09:45',
+      method: PaymentType.DEBIT_CARD,
+      status: PaymentStatus.PENDING,
+      referenceNo: 'REF-DC-003',
+      notes: 'Payment pending verification'
+    },
+    {
+      id: 1004,
+      guestName: 'Neha Gupta',
+      bookingId: 'BK004',
+      amount: 5000,
+      date: '2026-04-12',
+      time: '15:20',
+      method: PaymentType.UPI,
+      status: PaymentStatus.COMPLETED,
+      referenceNo: 'REF-UPI-004',
+      notes: 'UPI payment processed'
+    },
+    {
+      id: 1005,
+      guestName: 'Devesh Kumar',
+      bookingId: 'BK005',
+      amount: 7920,
+      date: '2026-04-11',
+      time: '11:00',
+      method: PaymentType.CREDIT_CARD,
+      status: PaymentStatus.FAILED,
+      referenceNo: 'REF-CC-005',
+      notes: 'Payment failed - card declined'
+    }
+  ],
+  2: [ // Hotel ID 2 - DigiStay Goa
+    {
+      id: 2001,
+      guestName: 'Aisha Khan',
+      bookingId: 'BK201',
+      amount: 26180,
+      date: '2026-04-15',
+      time: '16:00',
+      method: PaymentType.CREDIT_CARD,
+      status: PaymentStatus.COMPLETED,
+      referenceNo: 'REF-CC-201',
+      notes: 'Online payment completed'
+    },
+    {
+      id: 2002,
+      guestName: 'Ravi Verma',
+      bookingId: 'BK202',
+      amount: 19910,
+      date: '2026-04-14',
+      time: '13:30',
+      method: PaymentType.BANK_TRANSFER,
+      status: PaymentStatus.COMPLETED,
+      referenceNo: 'REF-BT-202',
+      notes: 'Bank transfer successful'
+    },
+    {
+      id: 2003,
+      guestName: 'Esha Nair',
+      bookingId: 'BK203',
+      amount: 8000,
+      date: '2026-04-13',
+      time: '12:45',
+      method: PaymentType.WALLET,
+      status: PaymentStatus.REFUNDED,
+      referenceNo: 'REF-WL-203',
+      notes: 'Refund processed to wallet'
+    }
+  ],
+  3: [ // Hotel ID 3 - DigiStay Bangalore
+    {
+      id: 3001,
+      guestName: 'Rohit Nair',
+      bookingId: 'BK301',
+      amount: 11990,
+      date: '2026-04-15',
+      time: '10:00',
+      method: PaymentType.DEBIT_CARD,
+      status: PaymentStatus.COMPLETED,
+      referenceNo: 'REF-DC-301',
+      notes: 'Debit card payment successful'
+    },
+    {
+      id: 3002,
+      guestName: 'Akshara Reddy',
+      bookingId: 'BK302',
+      amount: 19910,
+      date: '2026-04-14',
+      time: '14:20',
+      method: PaymentType.UPI,
+      status: PaymentStatus.COMPLETED,
+      referenceNo: 'REF-UPI-302',
+      notes: 'UPI payment processed'
+    },
+    {
+      id: 3003,
+      guestName: 'Aditya Gupta',
+      bookingId: 'BK303',
+      amount: 9900,
+      date: '2026-04-13',
+      time: '11:30',
+      method: PaymentType.CREDIT_CARD,
+      status: PaymentStatus.PENDING,
+      referenceNo: 'REF-CC-303',
+      notes: 'Payment under verification'
+    },
+    {
+      id: 3004,
+      guestName: 'Meera Singh',
+      bookingId: 'BK304',
+      amount: 20900,
+      date: '2026-04-16',
+      time: '15:45',
+      method: PaymentType.BANK_TRANSFER,
+      status: PaymentStatus.COMPLETED,
+      referenceNo: 'REF-BT-304',
+      notes: 'Bank transfer completed'
     }
   ]
 };

@@ -34,6 +34,7 @@ export enum OwnerTabName {
   AVAILABILITY = 'availability',
   RECEPTIONISTS = 'receptionists',
   AUDITOR_REPORT = 'auditorReport',
+  PAYMENT_REPORT = 'paymentReport',
 }
 
 /**
@@ -76,6 +77,28 @@ export enum BookingStatus {
   CHECKED_IN = 'checked_in',
   CHECKED_OUT = 'checked_out',
   CANCELLED = 'cancelled',
+}
+
+/**
+ * Payment status types
+ */
+export enum PaymentStatus {
+  COMPLETED = 'completed',
+  PENDING = 'pending',
+  FAILED = 'failed',
+  REFUNDED = 'refunded',
+}
+
+/**
+ * Payment method types
+ */
+export enum PaymentType {
+  CREDIT_CARD = 'Credit Card',
+  DEBIT_CARD = 'Debit Card',
+  UPI = 'UPI',
+  BANK_TRANSFER = 'Bank Transfer',
+  CASH = 'Cash',
+  WALLET = 'Wallet',
 }
 
 /**

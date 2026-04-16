@@ -9,6 +9,7 @@ import AmenitiesManagement from './AmenitiesManagement';
 import RoomAvailability from './RoomAvailability';
 import ReceptionistRegistration from './ReceptionistRegistration';
 import AuditorReport from './AuditorReport';
+import PaymentReport from './PaymentReport';
 import SettingsModal from '../settings/SettingsModal';
 import { getInitialHotelsData } from '../../mockData/dummyData';
 import { OwnerTabName, UserRole } from '../common/enums';
@@ -118,6 +119,12 @@ export default function OwnerScreen({ onSwitchToReception, onLogout }) {
             >
               📋 Auditor Reports
             </button>
+            <button 
+              className={`nav-btn ${activeTab === OwnerTabName.PAYMENT_REPORT ? 'active' : ''}`}
+              onClick={() => setActiveTab(OwnerTabName.PAYMENT_REPORT)}
+            >
+              💰 Payment Reports
+            </button>
           </>
         )}
       </nav>
@@ -132,6 +139,7 @@ export default function OwnerScreen({ onSwitchToReception, onLogout }) {
         {selectedHotel && activeTab === OwnerTabName.AVAILABILITY && <RoomAvailability hotel={selectedHotel} />}
         {selectedHotel && activeTab === OwnerTabName.RECEPTIONISTS && <ReceptionistRegistration hotel={selectedHotel} />}
         {selectedHotel && activeTab === OwnerTabName.AUDITOR_REPORT && <AuditorReport hotel={selectedHotel} />}
+        {selectedHotel && activeTab === OwnerTabName.PAYMENT_REPORT && <PaymentReport hotel={selectedHotel} />}
       </main>
 
       {/* Settings Modal */}
